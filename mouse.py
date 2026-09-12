@@ -29,7 +29,6 @@ def count_raised_fingers(landmarks):
     else:
         fingers.append(0)
         
-    # الأصابع الأربعة (8=سبابة, 12=وسطى, 16=بنصر, 20=خنصر)
     for tip_id in TIP_IDS[1:]:
         if landmarks[tip_id].y < landmarks[tip_id - 2].y:
             fingers.append(1)
